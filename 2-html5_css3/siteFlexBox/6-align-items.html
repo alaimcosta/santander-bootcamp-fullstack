@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - align items</title>
+    <style>
+        .container{
+            max-width: 350px;
+            border: 4px solid black;
+            display: flex;
+        }
+
+        .item{
+            background-color: blueviolet;
+            margin: 5px;
+            color: white;
+            text-align: center;
+            flex: 1;
+        }
+
+        .center{
+            align-items: center;
+        }
+        .stretch{
+            align-items: stretch;
+        }
+        .start{
+            align-items: flex-start;
+        }
+        .end{
+            align-items: flex-end;
+        }
+        .baseline{
+            align-items: baseline;
+        }
+        .column{
+            flex-direction: column;
+        }
+        .central{
+            height: 300px;
+            justify-content: center;
+        }
+        .central .item{
+            flex: 0;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <p>center</p>
+    <section class="container center">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2 xxxxxxxxxxxxxx</div>
+        <div class="item">Item 3 xxxxxxxxxxxxx</div>
+    </section>
+
+    <p>strectch</p>
+    <section class="container stretch">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2 xxxxxxuuuuuuuuu uuuuuuu. uuuuuuuuuuuuuuxxxxxxxx</div>
+        <div class="item">Item 3 xxxxxxxxxxxxxs. ddddddddddd. ddddddddssss sssfgffff gsss ssss</div>
+    </section>
+
+    <p>flex-start</p>
+    <section class="container start">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2 xxxxxxuuuuuu uuuuuuuuuuuuuuu uuuuuuuuuxxxx xxxx</div>
+        <div class="item">Item 3 xxxxxx xxxxxxxsd ddddddd ddddddddd ddsssss ssfgffffgsssssss</div>
+    </section> 
+
+    <p>flex-end</p>
+    <section class="container end">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2 xxxxxxuuuuuu uuuuuuuuuuuuuuu uuuuuuuuuxxxx xxxx</div>
+        <div class="item">Item 3 xxxxxx xxxxxxxsd ddddddd ddddddddd ddsssss ssfgffffgsssssss</div>
+    </section> 
+
+    <p>baseline</p>
+    <section class="container baseline">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2 xxxx xxuuuuuu. uuuuuuuuuuuuuuu uuuuuuuuuxxxx xxxx</div>
+        <div class="item">Item 3 xxxxxx xxxxxxxsd ddddddd ddddddddd ddsssss ssfgffffgsssssss</div>
+    </section> 
+
+    <h1>column</h1>
+    <p>flex-start</p>
+    <section class="container start column">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2  uuuuuuuuuxxxx xxxx</div>
+        <div class="item">Item 3 ddddddd ddddddddd ddsssss ssfgffffgsssssss</div>
+    </section> 
+
+    <p>flex-end</p>
+    <section class="container end column">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2uuuuuu uuuuuuuuuxxxx xxxx</div>
+        <div class="item">Item 3 xxxxxx ddddddddd ddsssss ssfgffffgsssssss</div>
+    </section> 
+    <p>center</p>
+    <section class="container center column">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2 xxxxxxxxxxxxxx</div>
+        <div class="item">Item 3 xxxxxxxxxxddddddddddddxxx</div>
+    </section>
+    <p>baseline</p>
+    <section class="container baseline column">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2 xxxx xxuuuuuu. uuuuuuuuuuuuuuu uuuuuuuuuxxxx xxxx</div>
+        <div class="item">Item 3 xxxxxx xxxxxxxsd ddddddd ddddddddd ddsssss ssfgffffgsssssss</div>
+    </section> 
+
+    <p>Alinhamento Cental</p>
+    <section class="container central center">
+        <div class="item">Texto testo textotexto. texto Texto testo textotexto texto</div>
+    </section>
+</body>
+</html>
